@@ -5,12 +5,12 @@ import plotly.graph_objects as go
 
 from PIL import Image
 
-st.set_page_config(page_title="Análise da Reunião", layout="wide")
+st.set_page_config(page_title="Meeting Analysis", layout="wide")
 
 row = st.columns(1)
 
 row[0].image("nexi.jpg", width=250)
-row[0].markdown("## 👋 Bem-vinda, Rita!")
+row[0].markdown("## 👋 Welcome, Rita!")
 
 st.write("")
 st.write("")
@@ -18,82 +18,81 @@ st.write("")
 
 
 
-st.title("📊 Análise da Reunião (13-02-2025)")
+st.title("📊 Meeting Analysis (13-02-2025)")
 
 st.write("")
-st.write("##### Participantes: <span style='font-weight:normal;'>André Neiva, Daniel Furtado, Francisco Falcão, Rita Batista.</span>", unsafe_allow_html=True)
-st.write("##### Duração: <span style='font-weight:normal;'>11:35 - 12:57 (92 minutos)</span>", unsafe_allow_html=True)
+st.write("##### Participants: <span style='font-weight:normal;'>André Neiva, Daniel Furtado, Francisco Falcão, Rita Batista.</span>", unsafe_allow_html=True)
+st.write("##### Duration: <span style='font-weight:normal;'>11:35 - 12:57 (92 minutes)</span>", unsafe_allow_html=True)
 
 
 st.write("")
 
-st.header("🎯 Objetivos", divider="gray")
+st.header("🎯 Goals", divider="gray")
 
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Apresentação do sistema de transcrição automática<span style='font-weight:normal;'> e a sua aplicabilidade em formações e reuniões.</span>", unsafe_allow_html=True)
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ Objetivo Atingido: <span style='font-weight:normal;'>Sim, foi demonstrado como a ferramenta funciona em tempo real e como os relatórios podem ser gerados automaticamente.</span>", unsafe_allow_html=True)
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Presentation of the automatic transcription system<span style='font-weight:normal;'> and its applicability in training sessions and meetings.</span>", unsafe_allow_html=True)
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ Objective Achieved: <span style='font-weight:normal;'>Yes, it was demonstrated how the tool works in real time and how reports can be generated automatically.</span>", unsafe_allow_html=True)
 
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Exploração da análise do engagement<span style='font-weight:normal;'> dos formandos e o impacto no processo de aprendizagem.</span>", unsafe_allow_html=True)
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ Objetivo Atingido: <span style='font-weight:normal;'>Sim, foram apresentados gráficos e métricas que mostram como a participação pode ser avaliada e melhorada.</span>", unsafe_allow_html=True)
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Exploration of engagement analysis<span style='font-weight:normal;'> of trainees and its impact on the learning process.</span>", unsafe_allow_html=True)
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ Objective Achieved: <span style='font-weight:normal;'>Yes, charts and metrics were presented showing how participation can be evaluated and improved.</span>", unsafe_allow_html=True)
 
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Discussão sobre privacidade e conformidade legal<span style='font-weight:normal;'> no tratamento dos dados dos participantes.</span>", unsafe_allow_html=True)
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ Objetivo Atingido: <span style='font-weight:normal;'>Sim, foram discutidas formas de anonimizar os dados e garantir a conformidade com as regulamentações.</span>", unsafe_allow_html=True)
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Discussion on privacy and legal compliance<span style='font-weight:normal;'> in handling participants' data.</span>", unsafe_allow_html=True)
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ Objective Achieved: <span style='font-weight:normal;'>Yes, ways to anonymize data and ensure compliance with regulations were discussed.</span>", unsafe_allow_html=True)
 
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Apresentação de melhorias futuras<span style='font-weight:normal;'> para a otimização da interface e experiência do utilizador.</span>", unsafe_allow_html=True)
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ Objetivo Atingido: <span style='font-weight:normal;'>Sim, foi identificado que ajustes na interface são necessários para melhor usabilidade.</span>", unsafe_allow_html=True)
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Presentation of future improvements<span style='font-weight:normal;'> for optimizing the interface and user experience.</span>", unsafe_allow_html=True)
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ Objective Achieved: <span style='font-weight:normal;'>Yes, it was identified that interface adjustments are necessary for better usability.</span>", unsafe_allow_html=True)
 
 
-st.header("📊 Avaliação", divider="gray")
+st.header("📊 Evaluation", divider="gray")
 
-st.write("#### Classificação da Eficácia da Reunião: 87/100")
+st.write("#### Meeting Effectiveness Rating: 87/100")
 
-st.write("###### Critérios de Avaliação:")
+st.write("###### Evaluation Criteria:")
 
-dados = {
-    "Critério": [
-        "Cumprimento dos objetivos",
-        "Clareza das discussões",
-        "Tomada de decisões e atribuição de tarefas",
-        "Engagement e participação dos membros",
-        "Eficiência no tempo"
+data = {
+    "Criteria": [
+        "Achievement of objectives",
+        "Clarity of discussions",
+        "Decision-making and task assignment",
+        "Engagement and participation of members",
+        "Time efficiency"
     ],
-    "Peso (%)": [30, 20, 20, 15, 15],
-    "Avaliação (0-100)": [95, 85, 90, 85, 80],
-    "Justificação": [
-        "Os principais objetivos foram cumpridos, incluindo a demonstração das funcionalidades do sistema.",
-        "Houve clareza geral, embora alguns tópicos tenham sido debatidos extensivamente.",
-        "As decisões foram bem distribuídas, mas algumas tarefas não tiveram prazos definidos.",
-        "A participação foi ativa, com contribuições relevantes de diversos participantes.",
-        "A reunião poderia ter sido um pouco mais objetiva em certos momentos."
+    "Weight (%)": [30, 20, 20, 15, 15],
+    "Score (0-100)": [95, 85, 90, 85, 80],
+    "Justification": [
+        "The main objectives were achieved, including the demonstration of the system’s features.",
+        "Overall clarity was maintained, though some topics were debated extensively.",
+        "Decisions were well distributed, but some tasks lacked defined deadlines.",
+        "Active participation with relevant contributions from various attendees.",
+        "The meeting could have been slightly more objective at certain moments."
     ]
 }
 
 import pandas as pd
 
-df = pd.DataFrame(dados)
+df = pd.DataFrame(data)
 
-st.dataframe(df)  # Usa uma tabela interativa
+st.dataframe(df)  # Uses an interactive table
 
 
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Pontos Fortes:")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Demonstração prática e clara do sistema.")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Discussões produtivas sobre engagement e privacidade de dados.")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Novas ideias surgiram para melhorar a experiência do utilizador.")
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Strengths:")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Clear and practical demonstration of the system.")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Productive discussions on engagement and data privacy.")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - New ideas emerged to enhance the user experience.")
 
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ Pontos a Melhorar:")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Algumas discussões poderiam ter sido mais objetivas.")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Melhor definição de prazos para tarefas atribuídas.")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Refinamento necessário na interface para uma usabilidade otimizada.")
-
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ Areas for Improvement:")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Some discussions could have been more objective.")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Better definition of deadlines for assigned tasks.")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Refinements needed in the interface for optimized usability.")
 
 
 st.write("")
 st.write("")
 st.write("")
 
-st.header("📅 Temas Abordados", divider="gray")
+st.header("📅 Topics Covered", divider="gray")
 
 def format_time(hour, minute):
-    if (minute <  60):
+    if (minute < 60):
         return f"{hour:02d}:{minute:02d}"
     else:
         return f"{hour+1:02d}:{minute-60:02d}"
@@ -102,71 +101,71 @@ def format_time(hour, minute):
 start_hour, start_minute = 11, 35
 
 themes = [
-    (0, 7, "Introdução e chegada dos participantes.", [
-        "Apresentação dos participantes.",
-        "Explicação do objetivo da reunião.",
-        "Referência à gravação e estrutura do relatório da reunião."
+    (0, 7, "Introduction and participant arrival.", [
+        "Introduction of participants.",
+        "Explanation of the meeting’s objective.",
+        "Reference to recording and meeting report structure."
     ]),
-    (7, 9, "Apresentação do relatório da reunião anterior.", [
-        "Análise do relatório gerado automaticamente.",
-        "Objetivos da reunião anterior e a sua eficácia.",
-        "Identificação de melhorias e sugestões para melhoria." 
+    (7, 9, "Presentation of the previous meeting report.", [
+        "Analysis of the automatically generated report.",
+        "Objectives of the previous meeting and its effectiveness.",
+        "Identification of improvements and suggestions for enhancement."
     ]),
-    (9, 10, "Definição dos próximos passos e atribuição de tarefas.", [
-        "Organização das ações a serem tomadas.",
-        "Distribuição de responsabilidades entre os participantes.",
-        "Importância da documentação de reuniões para futuras revisões."
+    (9, 10, "Definition of next steps and task assignment.", [
+        "Organization of actions to be taken.",
+        "Distribution of responsibilities among participants.",
+        "Importance of meeting documentation for future reviews."
     ]),
-    (10, 11, "Discussão sobre a eficácia da formação e metodologias de ensino.", [
-        "Como avaliar a qualidade das formações através de relatórios.",
-        "Utilização da tecnologia para medir a participação e compreensão dos alunos.",
-        "Benefícios de feedback estruturado para formadores e formandos."
+    (10, 11, "Discussion on training effectiveness and teaching methodologies.", [
+        "How to evaluate the quality of training through reports.",
+        "Using technology to measure student participation and comprehension.",
+        "Benefits of structured feedback for trainers and trainees."
     ]),
 
-    (11, 12, "Análise do engagement e participação ativa.", [
-        "Comparação do envolvimento dos participantes com base em métricas visuais e textuais.",
-        "Identificação de momentos em que houve maior ou menor envolvimento.",
-        "Importância de captar o interesse dos alunos durante as formações."
+    (11, 12, "Analysis of engagement and active participation.", [
+        "Comparison of participant involvement based on visual and textual metrics.",
+        "Identification of moments of higher or lower engagement.",
+        "Importance of capturing student interest during training."
     ]),
-    (12, 20, "Considerações sobre o uso da tecnologia na educação.", [
-        "Aplicações da ferramenta em formações empresariais e desportivas.",
-        "Possibilidades de integração com plataformas de ensino e gestão de aprendizagem.",
-        "Benefícios de manter um histórico acessível das formações realizadas."
+    (12, 20, "Considerations on the use of technology in education.", [
+        "Applications of the tool in corporate and sports training.",
+        "Possibilities for integration with learning and management platforms.",
+        "Benefits of maintaining an accessible history of past training sessions."
     ]),
-    (20, 22, "Impacto da formação financiada e desafios de motivação.", [
-        "Diferença entre formações obrigatórias e opcionais.",
-        "Como a tecnologia pode garantir um melhor acompanhamento do processo de aprendizagem.",
-        "Dificuldades em manter a atenção e motivação dos participantes."
+    (20, 22, "Impact of funded training and motivation challenges.", [
+        "Difference between mandatory and optional training sessions.",
+        "How technology can ensure better monitoring of the learning process.",
+        "Difficulties in maintaining participant attention and motivation."
     ]),
-    (22, 29, "Gestão de acesso a materiais e certificação de formações.", [
-        "Problemas enfrentados por entidades formadoras na disponibilização de conteúdos.",
-        "Importância de um sistema integrado para armazenar informações de diferentes cursos.",
-        "Comparação com plataformas como Moodle e outras soluções e-learning."
+    (22, 29, "Management of material access and training certification.", [
+        "Challenges faced by training institutions in providing content.",
+        "Importance of an integrated system to store information from different courses.",
+        "Comparison with platforms like Moodle and other e-learning solutions."
     ]),
-    (29, 38, "Modelo de negócio para formação digital e plataforma centralizada.", [
-        "Possibilidade de criação de um marketplace de formações.",
-        "Como remunerar formadores e criar um sistema sustentável.",
-        "Exemplo de um \"Spotify da Formação\", onde conteúdos poderiam ser acessados."
+    (29, 38, "Business model for digital training and centralized platform.", [
+        "Possibility of creating a training marketplace.",
+        "How to remunerate trainers and create a sustainable system.",
+        "Example of a \"Spotify for Training,\" where content could be accessed."
     ]),
-    (38, 46, "Legalidade e autorizações necessárias para gravações e tratamento de dados.", [
-        "Questões legais associadas à gravação e uso de dados dos participantes.",
-        "Métodos para garantir conformidade com regulamentos de proteção de dados.",
-        "Alternativas para anonimizar informações sensíveis."
+    (38, 46, "Legality and necessary authorizations for recordings and data processing.", [
+        "Legal issues related to recording and using participant data.",
+        "Methods to ensure compliance with data protection regulations.",
+        "Alternatives for anonymizing sensitive information."
     ]),
-    (46, 52, "Integração da ferramenta em contextos académicos.", [
-        "Potencial uso da tecnologia em universidades.",
-        "Discussão sobre a possibilidade de parceria com a Universidade do Minho.",
-        "Benefícios da ferramenta para professores e alunos no ensino superior."
+    (46, 52, "Integration of the tool in academic contexts.", [
+        "Potential use of the technology in universities.",
+        "Discussion on a possible partnership with the University of Minho.",
+        "Benefits of the tool for professors and students in higher education."
     ]),
-    (52, 55, "Testes e implementação em formações reais.", [
-        "Proposta para testar a ferramenta em formações práticas.",
-        "Abordagem para garantir adesão dos formadores e alunos.",
-        "Identificação de possíveis resistências e estratégias para superá-las."
+    (52, 55, "Testing and implementation in real training sessions.", [
+        "Proposal to test the tool in practical training.",
+        "Approach to ensure trainer and student adherence.",
+        "Identification of possible resistance and strategies to overcome it."
     ]),
-    (55, 82, "Reflexão final e próximos passos.", [
-        "Conclusões sobre a reunião e planos de ação.",
-        "Preparação do envio de um e-mail para a Universidade do Minho.",
-        "Discussão sobre estratégias de comunicação e apresentação da ferramenta."
+    (55, 82, "Final reflection and next steps.", [
+        "Conclusions on the meeting and action plans.",
+        "Preparation for sending an email to the University of Minho.",
+        "Discussion on communication strategies and tool presentation."
     ])
 ]
 
@@ -188,52 +187,51 @@ st.header("📝 Resumo",divider="gray")
 
 st.text = """
 
-A reunião teve início pontualmente às 11:35 da manhã, com a presença de André Neiva, Rita Batista, Daniel Furtado e Francisco Falcão. 
-André abriu a sessão explicando os objetivos centrais do encontro, que envolviam a apresentação dos modelos desenvolvidos pela equipa, a análise do relatório da reunião anterior e a discussão de melhorias para a automatização dos processos. 
-Ele também salientou a importância de capturar dados objetivos para aprimorar a qualidade das formações e reuniões futuras. 
-Logo no início, houve uma breve troca de impressões entre os participantes sobre a necessidade de um sistema de relatórios eficaz, capaz de fornecer insights valiosos para formadores e organizações.
+The meeting started promptly at 11:35 AM, with the presence of André Neiva, Rita Batista, Daniel Furtado, and Francisco Falcão. 
+André opened the session by explaining the main objectives of the meeting, which involved presenting the models developed by the team, analyzing the previous meeting report, and discussing improvements for process automation. 
+He also emphasized the importance of capturing objective data to enhance the quality of future training sessions and meetings. 
+At the beginning, there was a brief exchange of views among participants on the need for an effective reporting system capable of providing valuable insights for trainers and organizations.
 
-Após essa introdução, André compartilhou um relatório gerado a partir da última reunião realizada há dois dias. 
-O documento detalhava os tópicos discutidos, a eficácia do encontro e a participação dos membros. 
-Rita e Daniel expressaram as suas opiniões sobre o conteúdo do relatório, apontando que a estrutura era bastante útil, mas que alguns aspectos poderiam ser melhorados, como a apresentação visual dos dados e a inclusão de métricas mais detalhadas sobre o envolvimento dos participantes. 
-André mencionou que futuras versões do relatório poderiam incluir gráficos mais intuitivos e informações customizáveis para atender às necessidades específicas de cada utilizador.
+Following this introduction, André shared a report generated from the last meeting held two days ago. 
+The document detailed the topics discussed, the effectiveness of the meeting, and member participation. 
+Rita and Daniel shared their opinions on the report's content, noting that its structure was quite useful but that some aspects could be improved, such as the visual presentation of data and the inclusion of more detailed metrics on participant engagement. 
+André mentioned that future versions of the report could include more intuitive graphs and customizable information to meet each user's specific needs.
 
-O próximo ponto da reunião abordou a eficácia das formações e como a tecnologia pode melhorar o processo de ensino e aprendizagem. André explicou que uma das funções-chave da ferramenta que estavam a desenvolver era a capacidade de medir o engagement dos participantes em tempo real. 
-Isso permitiria que os formadores identificassem momentos de maior ou menor atenção dos alunos e ajustassem as suas metodologias para maximizar o aproveitamento. 
-Rita complementou ao mencionar que, pela sua experiência, a motivação dos formandos varia bastante dependendo da natureza da formação. 
-Por exemplo, formações obrigatórias tendem a gerar menos envolvimento, enquanto cursos opcionais atraem participantes mais interessados. 
-A partir dessa observação, discutiu-se a possibilidade de personalizar os relatórios para diferenciar esses cenários e sugerir intervenções específicas para melhorar o envolvimento dos alunos.
+The next agenda item addressed the effectiveness of training sessions and how technology can improve the teaching and learning process. 
+André explained that one of the key functions of the tool they were developing was the ability to measure participant engagement in real-time.
+This would allow trainers to identify moments of higher or lower attention from students and adjust their methodologies to maximize learning outcomes. 
+Rita added that, in her experience, trainee motivation varies significantly depending on the nature of the training. 
+For example, mandatory training sessions tend to generate less engagement, whereas optional courses attract more interested participants. 
+Based on this observation, the team discussed the possibility of customizing reports to differentiate these scenarios and suggest specific interventions to improve student involvement.
 
-Outro tema importante foi a gestão do acesso aos materiais e a certificação das formações. 
-Rita destacou que muitas plataformas de ensino restringem o acesso ao conteúdo assim que o curso é concluído, o que pode ser prejudicial para os formandos que desejam revisar a matéria posteriormente. 
-Francisco sugeriu a criação de uma plataforma que funcionasse como um repositório centralizado de aprendizado, onde os alunos poderiam consultar seus materiais sempre que precisassem. 
-Comparações foram feitas com plataformas existentes como Moodle, mas ficou evidente que a solução proposta teria um diferencial significativo ao agregar diferentes cursos e entidades formadoras num único ambiente acessível.
+Another important topic was the management of material access and training certification. 
+Rita highlighted that many learning platforms restrict access to content once a course is completed, which can be detrimental to trainees who wish to review the material later. 
+Francisco suggested creating a platform that would function as a centralized learning repository, where students could access their materials whenever needed. 
+Comparisons were made with existing platforms like Moodle, but it became evident that the proposed solution would have a significant advantage by integrating different courses and training entities into a single accessible environment.
 
-A reunião então avançou para a questão legal relacionada à gravação e ao processamento de dados dos participantes. 
-Francisco explicou que qualquer gravação exigiria uma autorização explícita, e que seria essencial garantir conformidade com as regulamentações de proteção de dados. 
-Surgiram diferentes abordagens para contornar possíveis preocupações, como a anonimização de determinados dados ou a configuração de um sistema que processasse as informações sem armazená-las de forma permanente. 
-André e Daniel refletiram sobre a viabilidade dessas soluções, destacando que a tecnologia poderia ser ajustada para atender a requisitos legais sem comprometer a funcionalidade da ferramenta.
+The meeting then moved on to the legal aspects of recording and processing participant data. 
+Francisco explained that any recording would require explicit authorization and that it would be essential to ensure compliance with data protection regulations. 
+Various approaches were considered to address potential concerns, such as anonymizing certain data or configuring a system that processes information without storing it permanently. 
+André and Daniel reflected on the feasibility of these solutions, emphasizing that the technology could be adjusted to meet legal requirements without compromising the tool's functionality.
 
-Em seguida, discutiu-se a possibilidade de expandir o uso da ferramenta para o meio académico, particularmente na Universidade do Minho. 
-Rita comentou que a instituição tem um histórico de apoiar projetos inovadores e que poderia ser uma parceira estratégica para a implementação inicial da tecnologia. 
-André mencionou que já teve uma conversa preliminar com uma psicóloga da universidade que mostrou interesse no potencial da ferramenta para melhorar a experiência de aprendizagem. 
-A ideia de marcar uma reunião formal com representantes da universidade foi bem recebida, e Francisco sugeriu preparar um material de apresentação detalhado para destacar os benefícios da plataforma.
+Next, the discussion turned to the potential expansion of the tool's use in academic settings, particularly at the University of Minho. 
+Rita mentioned that the institution has a history of supporting innovative projects and could be a strategic partner for the initial implementation of the technology. 
+André noted that he had already had a preliminary conversation with a university psychologist who expressed interest in the tool's potential to enhance the learning experience. 
+The idea of scheduling a formal meeting with university representatives was well received, and Francisco suggested preparing a detailed presentation to highlight the platform's benefits.
 
-Outro ponto abordado foi a aplicação prática da tecnologia em formações corporativas. 
-Rita compartilhou uma experiência recente em que houve dificuldades em avaliar a eficácia de uma formação devido à falta de dados objetivos. 
-Com a ferramenta desenvolvida, seria possível gerar relatórios detalhados sobre a performance dos formandos e a dinâmica das sessões. 
-Francisco reforçou que a adoção de um sistema de acompanhamento contínuo poderia beneficiar tanto formadores quanto empresas, proporcionando um panorama mais claro sobre o retorno dos investimentos em formação.
+Another topic discussed was the practical application of the technology in corporate training sessions. 
+Rita shared a recent experience where evaluating training effectiveness was challenging due to a lack of objective data. With the developed tool, it would be possible to generate detailed reports on trainee performance and session dynamics. 
+Francisco reinforced that adopting a continuous monitoring system could benefit both trainers and companies, providing a clearer overview of the return on investment in training programs.
 
-Nos momentos finais da reunião, houve uma revisão das próximas ações a serem tomadas. 
-Ficou decidido que um e-mail seria enviado à Universidade do Minho para formalizar o contacto e agendar uma reunião. 
-Além disso, Francisco comprometeu-se a consultar especialistas jurídicos para garantir que todas as questões legais fossem abordadas corretamente antes da implementação em larga escala. 
-André mencionou que um primeiro teste da plataforma poderia ser realizado num ambiente controlado, permitindo ajustes antes de uma aplicação mais abrangente.
+In the final moments of the meeting, the next steps were reviewed. 
+It was decided that an email would be sent to the University of Minho to formalize contact and schedule a meeting. 
+Additionally, Francisco committed to consulting legal experts to ensure all legal issues were properly addressed before large-scale implementation. 
+André mentioned that an initial test of the platform could be conducted in a controlled environment, allowing for adjustments before a broader rollout.
 
-A reunião foi concluída com um sentimento positivo de avanço. 
-Todos os participantes concordaram que as discussões trouxeram insights valiosos para a evolução do projeto e que os próximos passos estavam bem definidos. 
-Ficou claro que a tecnologia desenvolvida tem o potencial de revolucionar a forma como formações e reuniões são conduzidas, proporcionando um método inovador para análise e acompanhamento de desempenho. 
-A expectativa é que as próximas etapas de implementação e teste tragam resultados concretos que confirmem os benefícios discutidos ao longo do encontro.
-
+The meeting concluded with a positive sense of progress. 
+All participants agreed that the discussions provided valuable insights for the project's evolution and that the next steps were well defined. 
+It became clear that the developed technology has the potential to revolutionize how training sessions and meetings are conducted, offering an innovative method for performance analysis and monitoring. 
+The expectation is that the upcoming implementation and testing phases will yield concrete results that confirm the benefits discussed throughout the meeting.
 
 """
 
@@ -245,64 +243,60 @@ st.write("")
 st.write("")
 
 
-import streamlit as st
+st.header("✅ Highlights", divider="gray")
 
-st.header("✅ Destaques", divider="gray")
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔸 Main objective of the meeting: <span style='font-weight:normal;'>The meeting focused on analyzing the meeting transcription and summarization platform, as well as its application in education and professional training.</span>", unsafe_allow_html=True)
 
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔸 Objetivo principal da reunião: <span style='font-weight:normal;'>A reunião teve como foco a análise da plataforma de transcrição e resumo de reuniões, bem como sua aplicação na educação e formação profissional.</span>", unsafe_allow_html=True)
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔸 Analysis of the previous meeting report: <span style='font-weight:normal;'>A detailed report from the previous meeting was presented, highlighting strengths and necessary improvements to optimize the automatic report generation.</span>", unsafe_allow_html=True)
 
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔸 Análise do relatório da reunião anterior: <span style='font-weight:normal;'>Foi apresentado um relatório detalhado da reunião anterior, destacando os pontos fortes e melhorias necessárias para otimizar a geração de relatórios automáticos.</span>", unsafe_allow_html=True)
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔸 Engagement and Participation Measurement: <span style='font-weight:normal;'>The evolution of the system to capture facial expressions and interaction patterns was discussed, enabling better monitoring of participant involvement.</span>", unsafe_allow_html=True)
 
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔸 Medição de Engagement e Participação: <span style='font-weight:normal;'>Discutiu-se a evolução do sistema para captar expressões faciais e padrões de interação, permitindo um melhor acompanhamento do envolvimento dos participantes.</span>", unsafe_allow_html=True)
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔸 Application of Technology in Education and Training: <span style='font-weight:normal;'>The possibilities of using the tool in higher education and corporate training were explored, with an emphasis on potential collaboration with the University of Minho.</span>", unsafe_allow_html=True)
 
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔸 Aplicação da Tecnologia no Ensino e Formação: <span style='font-weight:normal;'>Foram exploradas possibilidades de utilização da ferramenta na educação superior e em formações empresariais, com destaque para a potencial colaboração com a Universidade do Minho.</span>", unsafe_allow_html=True)
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔸 Legal Issues and Data Protection: <span style='font-weight:normal;'>The need for compliance with data protection regulations and possible solutions to anonymize sensitive information was debated.</span>", unsafe_allow_html=True)
 
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔸 Questões Legais e Proteção de Dados: <span style='font-weight:normal;'>Debateu-se a necessidade de conformidade com regulamentos de proteção de dados e possíveis soluções para anonimizar informações sensíveis.</span>", unsafe_allow_html=True)
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔸 Improvement of Interface and Report Presentation: <span style='font-weight:normal;'>The need to make reports more visual and intuitive, using clearer graphics and metrics, was identified.</span>", unsafe_allow_html=True)
 
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔸 Melhoria da Interface e Apresentação dos Relatórios: <span style='font-weight:normal;'>Foi identificada a necessidade de tornar os relatórios mais visuais e intuitivos, utilizando gráficos e métricas mais claras.</span>", unsafe_allow_html=True)
-
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔸 Testes Piloto e Implementação Inicial: <span style='font-weight:normal;'>Discutiu-se a realização de um teste inicial da plataforma num ambiente controlado para avaliar a sua eficácia antes da implementação em larga escala.</span>", unsafe_allow_html=True)
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔸 Pilot Tests and Initial Implementation: <span style='font-weight:normal;'>The execution of an initial platform test in a controlled environment was discussed to evaluate its effectiveness before large-scale implementation.</span>", unsafe_allow_html=True)
 
 st.write("\n\n\n")
 
-st.header("👣 Próximos Passos", divider="gray")
+st.header("👣 Next Steps", divider="gray")
 
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔹 Agendar uma reunião com representantes da Universidade do Minho para discutir a viabilidade de uma parceria e a aplicação da ferramenta no meio académico.")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔹 Consultar especialistas jurídicos para definir a melhor abordagem em relação à proteção de dados e permissões de uso da tecnologia.")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔹 Melhorar a interface do sistema, tornando os relatórios mais intuitivos e amigáveis para os utilizadores.")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔹 Refinar o \"engagement score\" e criar indicadores mais detalhados para avaliar a participação dos formandos.")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔹 Implementar um teste inicial da plataforma num ambiente controlado para recolher feedback e ajustes antes da expansão do projeto.")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔹 Schedule a meeting with representatives from the University of Minho to discuss the feasibility of a partnership and the application of the tool in academia.")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔹 Consult legal experts to define the best approach regarding data protection and technology usage permissions.")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔹 Improve the system interface, making reports more intuitive and user-friendly.")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔹 Refine the \"engagement score\" and create more detailed indicators to assess trainee participation.")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔹 Implement an initial test of the platform in a controlled environment to gather feedback and adjustments before project expansion.")
 
 st.write("\n\n\n")
 
+st.header("✍🏻 Assigned Tasks", divider="gray")
 
-st.header("✍🏻 Tarefas Atribuídas", divider="gray")
-
-# Dicionário de tarefas atribuídas a cada pessoa
+# Dictionary of assigned tasks per person
 tasks = {
     "André Neiva": [
-        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️ Enviar um e-mail para a Universidade do Minho para formalizar o interesse na parceria e agendar uma reunião.",
-        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️ Trabalhar na apresentação visual dos relatórios para torná-los mais intuitivos e informativos.",
-        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️ Coordenar com a equipa a organização do primeiro teste controlado da plataforma."
+        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️ Send an email to the University of Minho to formalize interest in the partnership and schedule a meeting.",
+        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️ Work on the visual presentation of reports to make them more intuitive and informative.",
+        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️ Coordinate with the team to organize the first controlled test of the platform."
     ],
     "Daniel Furtado": [
-        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️ Melhorar a funcionalidade de medição de engagement no sistema, incorporando análise de expressões faciais e interações.",
-        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️ Implementar ajustes técnicos para otimizar o processamento de transcrições e resumos em tempo real.",
-        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️ Desenvolver um mecanismo para personalizar relatórios conforme o tipo de formação e necessidade do utilizador."
+        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️ Improve the engagement measurement functionality in the system, incorporating facial expression and interaction analysis.",
+        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️ Implement technical adjustments to optimize real-time transcription and summarization processing.",
+        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️ Develop a mechanism to customize reports according to training type and user needs."
     ],
     "Francisco Falcão": [
-        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️ Consultar advogados para garantir conformidade legal da plataforma, especialmente em relação à proteção de dados e permissões.",
-        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️ Trabalhar na estruturação dos relatórios para torná-los mais acessíveis aos utilizadores finais."
+        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️ Consult lawyers to ensure the platform’s legal compliance, especially regarding data protection and permissions.",
+        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️ Work on structuring reports to make them more accessible to end users."
     ],
     "Rita Batista": [
-        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️ Explorar contactos na Universidade do Minho para facilitar a comunicação e viabilizar a apresentação da ferramenta.",
-        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️ Avaliar possíveis resistências de formadores e empresas em relação ao uso da tecnologia e sugerir estratégias para aumentar a aceitação."
+        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️ Explore contacts at the University of Minho to facilitate communication and enable the tool presentation.",
+        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️ Evaluate potential resistance from trainers and companies regarding technology adoption and suggest strategies to increase acceptance."
     ]
 }
 
 st.write("\n\n\n")
 
-# Criar checkboxes para cada pessoa
 selected_people = []
 for person in tasks.keys():
     if st.checkbox(person, value=True):  # Começa marcado por padrão
@@ -314,97 +308,99 @@ for person in selected_people:
     for task in tasks[person]:
         st.write(f" {task}")
 
-st.write("\n\n\n")
-
-st.header("❔ Questões Relevantes", divider="gray")
-
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔸 A plataforma permite que os formandos acessem o conteúdo das formações após a conclusão? <span style='font-weight:normal;'>(Francisco Falcão)</span>", unsafe_allow_html=True)
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Resposta: <span style='font-weight:normal;'>Atualmente, os formandos têm um período limitado de acesso devido às restrições da plataforma. A ideia futura é que cada aluno tenha um espaço próprio onde possa agregar todas as formações feitas ao longo da sua vida profissional e revisitar materiais sempre que necessário.</span>", unsafe_allow_html=True)
-
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔸 Como garantir que as perguntas e respostas durante a formação sejam armazenadas de forma útil para os alunos? <span style='font-weight:normal;'>(Francisco Falcão)</span>", unsafe_allow_html=True)
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Resposta: <span style='font-weight:normal;'>O sistema pode registrar as perguntas feitas pelos participantes e organizá-las num relatório, que poderá ser consultado posteriormente. Esse relatório pode incluir respostas, materiais de apoio e até recomendações personalizadas de estudo, sem necessidade de identificar os autores das perguntas.</span>", unsafe_allow_html=True)
-
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔸 O modelo atual permite personalizar recomendações de aprendizagem com base na interação dos formandos? <span style='font-weight:normal;'>(André Neiva)</span>", unsafe_allow_html=True)
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Resposta: <span style='font-weight:normal;'>Sim, a plataforma pode analisar o nível de engagement de cada formando e gerar sugestões de materiais complementares, como vídeos, artigos ou podcasts. Se o sistema detectar que um determinado tema não foi bem compreendido, poderá sugerir reforços específicos para cada aluno.</span>", unsafe_allow_html=True)
-
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔸 Como garantir a conformidade legal do armazenamento de dados dos formandos? <span style='font-weight:normal;'>(André Neiva)</span>", unsafe_allow_html=True)
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Resposta: <span style='font-weight:normal;'>A equipa jurídica está a rever as melhores práticas para garantir a conformidade com a legislação de proteção de dados. Alternativas incluem anonimizar os dados dos formandos, processar as informações em tempo real sem necessidade de armazenamento prolongado e garantir que os participantes tenham total transparência e controlo sobre os seus dados.</span>", unsafe_allow_html=True)
-
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔸 Os formandos podem optar por não participar da análise de engagement? <span style='font-weight:normal;'>(Rita Batista)</span>", unsafe_allow_html=True)
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Resposta: <span style='font-weight:normal;'>Sim, os participantes podem optar por não participar da análise facial e de engagement. Caso recusem, os seus dados não serão processados e apenas informações gerais da turma serão apresentadas.</span>", unsafe_allow_html=True)
-
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔸 Como evitar que a presença de câmeras influencie o comportamento dos formandos? <span style='font-weight:normal;'>(Rita Batista)</span>", unsafe_allow_html=True)
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Resposta: <span style='font-weight:normal;'>Estudos mostram que, após os primeiros minutos, os formandos deixam de se preocupar com as câmeras e agem naturalmente. Além disso, a ferramenta pode funcionar em segundo plano sem gravação permanente, apenas analisando expressões faciais e engagement no momento.</span>", unsafe_allow_html=True)
 
 st.write("\n\n\n")
 
+st.header("❔ Relevant Questions", divider="gray")
 
-st.header("🫡 Feedback da Reunião", divider="gray")
+
+st.write("###### 🔸 Does the platform allow trainees to access training content after completion? <span style='font-weight:normal;'>(Francisco Falcão)</span>", unsafe_allow_html=True)
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Answer: <span style='font-weight:normal;'>Currently, trainees have limited access due to platform restrictions. The future goal is for each trainee to have a personal space where they can aggregate all their completed trainings and revisit materials whenever needed.</span>", unsafe_allow_html=True)
+
+st.write("###### 🔸 How can we ensure that questions and answers during training are stored usefully for students? <span style='font-weight:normal;'>(Francisco Falcão)</span>", unsafe_allow_html=True)
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Answer: <span style='font-weight:normal;'>The system can record participants' questions and organize them into a report, which can be consulted later. This report can include responses, supporting materials, and even personalized study recommendations, without identifying the question authors.</span>", unsafe_allow_html=True)
+
+st.write("###### 🔸 Does the current model allow learning recommendations to be personalized based on trainee interaction? <span style='font-weight:normal;'>(André Neiva)</span>", unsafe_allow_html=True)
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Answer: <span style='font-weight:normal;'>Yes, the platform can analyze each trainee's level of engagement and generate suggestions for complementary materials such as videos, articles, or podcasts. If the system detects that a certain topic was not well understood, it can suggest specific reinforcements for each student.</span>", unsafe_allow_html=True)
+
+st.write("###### 🔸 How can we ensure legal compliance with trainee data storage? <span style='font-weight:normal;'>(André Neiva)</span>", unsafe_allow_html=True)
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Answer: <span style='font-weight:normal;'>The legal team is reviewing best practices to ensure compliance with data protection laws. Alternatives include anonymizing trainee data, processing information in real-time without long-term storage, and ensuring participants have full transparency and control over their data.</span>", unsafe_allow_html=True)
+
+st.write("###### 🔸 Can trainees opt out of engagement analysis? <span style='font-weight:normal;'>(Rita Batista)</span>", unsafe_allow_html=True)
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Answer: <span style='font-weight:normal;'>Yes, participants can opt out of facial and engagement analysis. If they decline, their data will not be processed, and only general class information will be presented.</span>", unsafe_allow_html=True)
+
+st.write("###### 🔸 How can we prevent the presence of cameras from influencing trainee behavior? <span style='font-weight:normal;'>(Rita Batista)</span>", unsafe_allow_html=True)
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Answer: <span style='font-weight:normal;'>Studies show that after the first few minutes, trainees stop worrying about the cameras and behave naturally. Additionally, the tool can operate in the background without permanent recording, only analyzing facial expressions and engagement in real-time.</span>", unsafe_allow_html=True)
+
+
+
+
+st.header("🫡 Meeting Feedback", divider="gray")
+
 
 st.write("### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;André Neiva")
 
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Aspetos Positivos:")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Explicou bem a estrutura do projeto e os objetivos da ferramenta desenvolvida.")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Conseguiu manter a interação ativa com os outros participantes.")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Trouxe exemplos práticos para ilustrar a funcionalidade do sistema.")
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Positive Aspects:")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Clearly explained the project structure and the objectives of the developed tool.")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Successfully maintained active interaction with other participants.")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Provided practical examples to illustrate the system's functionality.")
 
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ Aspetos a Melhorar:")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - A comunicação poderia ser mais objetiva, evitando explicações longas e justificações desnecessárias.")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Algumas piadas e comentários informais poderiam ser reduzidos para manter o foco na reunião (exemplo: a referência a \"Trans Neiva\").")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Garantir que todos os participantes tenham espaço para intervir, evitando monopolizar a conversa.")
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ Areas for Improvement:")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Communication could be more concise, avoiding lengthy explanations and unnecessary justifications.")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Some jokes and informal comments could be reduced to keep the meeting focused (e.g., the reference to \"Trans Neiva\").")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Ensure that all participants have space to contribute, avoiding monopolizing the conversation.")
 
 st.write("### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rita Batista")
 
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Aspetos Positivos:")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Demonstrou interesse genuíno e trouxe perspetivas valiosas sobre a aplicação do sistema no setor da formação.")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Explicou de forma clara as dificuldades e desafios da formação online e presencial.")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Sugeriu contactos importantes, nomeadamente com a Universidade do Minho.")
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Positive Aspects:")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Showed genuine interest and provided valuable insights on the system's application in the training sector.")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Clearly explained the challenges of online and in-person training.")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Suggested valuable contacts, including with the University of Minho.")
 
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ Aspetos a Melhorar:")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Algumas ideias foram repetidas ao longo da reunião. Poderia ser mais concisa.")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Poderia estruturar melhor as suas intervenções para facilitar a fluidez da conversa e evitar desvios do tema central.")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Algumas explicações foram longas e detalhadas demais, dificultando a compreensão rápida dos pontos principais.")
-
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ Areas for Improvement:")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Some ideas were repeated throughout the meeting. Could be more concise.")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Could structure interventions better to improve the flow of conversation and avoid topic deviations.")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Some explanations were too lengthy and detailed, making it harder to grasp key points quickly.")
 
 st.write("### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Francisco Falcão")
 
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Aspetos Positivos:")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Apresentou bem os aspetos legais e técnicos da ferramenta.")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Fez uma boa ligação entre a ferramenta e o impacto na formação contínua e na certificação dos formandos.")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Trouxe argumentos sólidos sobre a importância do projeto e a sua aplicabilidade em diferentes setores.")
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Positive Aspects:")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Presented the legal and technical aspects of the tool well.")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Made a strong connection between the tool and its impact on continuous training and certification.")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Provided solid arguments on the project's importance and its applicability in different sectors.")
 
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ Aspetos a Melhorar:")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Algumas explicações foram demasiado extensas, o que pode ter tornado certos pontos menos claros.")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Poderia resumir melhor alguns conceitos para tornar a reunião mais eficiente.")
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ Areas for Improvement:")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Some explanations were too lengthy, which may have made certain points less clear.")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Could summarize some concepts better to make the meeting more efficient.")
 
 st.write("### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Daniel Furtado")
 
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Aspetos Positivos:")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Demonstrou conhecimento técnico e esteve atento à discussão.")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Trouxe uma perspetiva relevante sobre a possibilidade de adaptar a plataforma com novas funcionalidades.")
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Positive Aspects:")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Demonstrated technical knowledge and was attentive to the discussion.")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Provided a relevant perspective on the potential adaptation of the platform with new features.")
 
-st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ Aspetos a Melhorar:")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Participação foi muito reduzida. Poderia intervir mais e esclarecer dúvidas técnicas quando surgem.")
-st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Poderia ter uma abordagem mais proativa para apresentar sugestões ou melhorias ao projeto.")
+st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ Areas for Improvement:")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Participation was very limited. Could engage more and clarify technical doubts when they arise.")
+st.write(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Could take a more proactive approach in suggesting improvements to the project.")
 
-
+st.write("\n\n\n")
 
 
 topics = {
     "Global": None,
-    "Introdução e chegada dos participantes": ("11:35", "11:42"),
-    "Apresentação do relatório da reunião anterior": ("11:42", "11:44"),
-    "Definição de próximos passos e atribuição de tarefas": ("11:44", "11:45"),
-    "Discussão sobre a eficácia da formação e metodologias de ensino": ("11:45", "11:46"),
-    "Análise do engagement e participação ativa": ("11:46","11:47"),
-    "Considerações sobre o uso da tecnologia na educação": ("11:47","11:55"),
-    "Impacto da formação financiada e desafios de motivação": ("11:55","11:57"),
-    "Gestão de acesso a materiais e certificação de formações": ("11:57","12:04"),
-    "Modelo de negócio para formação digital e plataforma centralizada": ("12:04","12:13"),
-    "Legalidade e autorizações necessárias para gravações e tratamento de dados": ("12:13","12:21"),
-    "Integração da ferramenta em contextos académicos": ("12:21","12:27"),
-    "Testes e implementação em formações reais": ("12:27","12:30"),
-    "Reflexão final e próximos passos": ("12:30","12:57"),
+    "Introduction and participant arrival": ("11:35", "11:42"),
+    "Presentation of the previous meeting report": ("11:42", "11:44"),
+    "Definition of next steps and task assignment": ("11:44", "11:45"),
+    "Discussion on training effectiveness and teaching methodologies": ("11:45", "11:46"),
+    "Analysis of engagement and active participation": ("11:46","11:47"),
+    "Considerations on technology use in education": ("11:47","11:55"),
+    "Impact of funded training and motivation challenges": ("11:55","11:57"),
+    "Access management for materials and certification": ("11:57","12:04"),
+    "Business model for digital training and centralized platform": ("12:04","12:13"),
+    "Legality and necessary authorizations for recordings and data processing": ("12:13","12:21"),
+    "Integration of the tool in academic contexts": ("12:21","12:27"),
+    "Testing and implementation in real training scenarios": ("12:27","12:30"),
+    "Final reflection and next steps": ("12:30","12:57"),
 }
 
 
@@ -419,11 +415,11 @@ time_adjust = "1min"
 plot_data = []
 
 data_global = data.set_index('datetime').resample(time_adjust)["engagement1"].mean().reset_index()
-data_global['person'] = 'Média Global' 
+data_global['person'] = 'Global Mean' 
 
 data["person"] = data["person"].replace({0: "Rita Batista", 1: "André Neiva", 2: "Francisco Falcão", 3: "Daniel Furtado"})
 
-selected_topic = st.selectbox("🔍 Filtrar Tema:", list(topics.keys(),), key="engagement")
+selected_topic = st.selectbox("🔍 Filter by Theme:", list(topics.keys(),), key="engagement")
 if selected_topic != "Global":
     start_time, end_time = topics[selected_topic]
     mask_time = (data['datetime'].dt.strftime("%H:%M") >= start_time) & (data['datetime'].dt.strftime("%H:%M") <= end_time)
@@ -446,14 +442,14 @@ for person in data['person'].unique():
 plot_data.append(data_filtered_global)
 plot_df = pd.concat(plot_data)
 
-plot_df["Tema"] = "Global"  # Valor padrão
+plot_df["Theme"] = "Global"  # Valor padrão
 
 for tema, intervalo in topics.items():
     if intervalo:  # Verifica se o valor não é None
         start_time, end_time = intervalo
         mask = (plot_df["datetime"].dt.strftime("%H:%M") >= start_time) & \
                (plot_df["datetime"].dt.strftime("%H:%M") <= end_time)
-        plot_df.loc[mask, "Tema"] = tema  # Atribui o tema correto
+        plot_df.loc[mask, "Theme"] = tema  # Atribui o tema correto
 
 
 fig = px.line(
@@ -461,13 +457,13 @@ fig = px.line(
     x="datetime", 
     y="engagement1", 
     color="person",
-    title="Engagement ao Longo do Tempo",
-    labels={"datetime": "Tempo", "engagement1": "Engagement (%)", "person": "Participantes"},
+    title="Engagement Over the Time",
+    labels={"datetime": "Time", "engagement1": "Engagement (%)", "person": "Participants"},
     template="plotly_white",
     line_dash="person",
     line_group="person",
-    line_dash_map={"Média Global": "dash", "André Neiva": "solid", "Daniel Furtado": "solid", "Francisco Falcão": "solid", "Rita Batista": "solid"},
-    hover_data=["Tema"],
+    line_dash_map={"Global Mean": "dash", "André Neiva": "solid", "Daniel Furtado": "solid", "Francisco Falcão": "solid", "Rita Batista": "solid"},
+    hover_data=["Theme"],
     range_y=[0, 1]
 )
 
@@ -475,7 +471,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 st.write("")
 
-st.write("##### Momentos Relevantes")
+st.write("##### Relevant Moments")
 
 col1, col2, col3, col4, b,c,d,e = st.columns(8)
 
@@ -497,20 +493,20 @@ with col2:
 
 
 if st.session_state.show_image_1623:
-    st.image(Image.open("11_49.png"), caption="Momento Baixo Engagement", width=650)
+    st.image(Image.open("11_49.png"), caption="Low Engagement Moment", width=650)
 
 if st.session_state.show_image_1625:
-    st.image(Image.open("12_34.png"), caption="Momento Alto Engagement", width=650)
+    st.image(Image.open("12_34.png"), caption="High Engagement Moment", width=650)
 
 st.write("")
 st.write("")
 st.write("")
 
 
-st.header("📈 Participação", divider="gray")
+st.header("📈 Participation", divider="gray")
 st.write("")
 
-st.write("##### 🗣️ Participação Ativa:")
+st.write("##### 🗣️ Active Participation:")
 st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; •  André Neiva: <span style='font-weight:normal;'>00:27:13 (29.58%)</span>", unsafe_allow_html=True )
 st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; •  Daniel Furtado: <span style='font-weight:normal;'>00:06:26 (06.99%)</span>", unsafe_allow_html=True )
 st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; •  Rita Batista: <span style='font-weight:normal;'>00:34:28 (37.46%)</span>", unsafe_allow_html=True )
@@ -520,7 +516,7 @@ st.write("###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb
 
 
 df_resampled = pd.read_csv("interventions.csv", index_col=0, parse_dates=True)
-df_resampled["Média Global"] = df_resampled[["André Neiva", "Daniel Furtado", "Rita Batista", "Francisco Falcão"]].mean(axis=1)
+df_resampled["Global Mean"] = df_resampled[["André Neiva", "Daniel Furtado", "Rita Batista", "Francisco Falcão"]].mean(axis=1)
 
 
 
@@ -533,7 +529,7 @@ participants = df_resampled.columns.tolist()
 df_filtered = df_resampled[participants].reset_index()
 df_melted = df_filtered.melt(id_vars=["time"], var_name="Participant", value_name="Interventions")
 
-selected_topic = st.selectbox("🔍 Filtrar por Tema:", list(topics.keys(),), key="participation")
+selected_topic = st.selectbox("🔍 Filter by Theme:", list(topics.keys(),), key="participation")
 if selected_topic != "Global":
     start_time, end_time = topics[selected_topic]
     mask_time = (df_melted['time'].dt.strftime("%H:%M") >= start_time) & (df_melted['time'].dt.strftime("%H:%M") <= end_time)
@@ -542,32 +538,32 @@ else:
     data_filtered = df_melted
 
 
-data_filtered["Tema"] = "Global"  # Valor padrão
+data_filtered["Theme"] = "Global"  # Valor padrão
 
 for tema, intervalo in topics.items():
     if intervalo:  # Verifica se o valor não é None
         start_time, end_time = intervalo
         mask = (data_filtered["time"].dt.strftime("%H:%M") >= start_time) & \
                (data_filtered["time"].dt.strftime("%H:%M") <= end_time)
-        data_filtered.loc[mask, "Tema"] = tema  # Atribui o tema correto
+        data_filtered.loc[mask, "Theme"] = tema  # Atribui o tema correto
 
 
 
 
 
 fig = px.line(data_filtered, x="time", y="Interventions", color="Participant",
-            labels={"time": "Horário", "Interventions": "Número de Intervenções"},
+            labels={"time": "Horário", "Interventions": "Number of Interventions"},
             line_dash="Participant",
-            line_dash_map={"Média Global": "dash", "André Neiva": "solid", "Daniel Furtado": "solid", "Francisco Falcão": "solid", "Rita Batista": "solid"},
-            title="Participação ao Longo do Tempo",
-            hover_data=["Tema"]
+            line_dash_map={"Global Mean": "dash", "André Neiva": "solid", "Daniel Furtado": "solid", "Francisco Falcão": "solid", "Rita Batista": "solid"},
+            title="Participation Over the Time",
+            hover_data=["Theme"]
             )
 
 
 
-fig.update_xaxes(title="Tempo")
-fig.update_yaxes(title="Nº ntervenções")
-fig.update_layout(legend_title="Participantes")
+fig.update_xaxes(title="Time")
+fig.update_yaxes(title="Number of Interventions")
+fig.update_layout(legend_title="Participants")
 
 st.plotly_chart(fig, use_container_width=True)
 
@@ -578,7 +574,7 @@ st.write("")
 st.write("")
 
 
-st.header("🎭 Expressão Facial", divider="gray")
+st.header("🎭 Facial Expression", divider="gray")
 
 time_adjust = '1 min'
 
@@ -587,8 +583,8 @@ time_adjust = '1 min'
 people_list = data['person'].unique()
 people_list = ["Global"] + list(people_list)
 
-selected_topic = st.selectbox("🔍 Filtrar por Tema:", list(topics.keys()), key="facial_expression")
-selected_person = st.selectbox("👤 Filtrar por Pessoa:", people_list)
+selected_topic = st.selectbox("🔍 Filter by Theme:", list(topics.keys()), key="facial_expression")
+selected_person = st.selectbox("👤 Filter by Person:", people_list)
 
 if selected_topic != "Global":
     start_time, end_time = topics[selected_topic]
@@ -617,7 +613,7 @@ for tema, intervalo in topics.items():
         start_time, end_time = intervalo
         mask = (plot_data["datetime"].dt.strftime("%H:%M") >= start_time) & \
                (plot_data["datetime"].dt.strftime("%H:%M") <= end_time)
-        plot_data.loc[mask, "Tema"] = tema  # Atribui o tema correto
+        plot_data.loc[mask, "Theme"] = tema  # Atribui o tema correto
 
 
 
@@ -627,9 +623,9 @@ fig = px.line(
     x="datetime", 
     y="Frequency", 
     color="Expression", 
-    title=f"Variação da Expressão Facial - {selected_topic} ({selected_person})",
-    labels={"datetime": "Tempo", "Frequency": "Expressão Facial (%)", "Expression": "Expressão Facial"},
-    hover_data=["Tema"],
+    title=f"Facial Expression Variation - {selected_topic} ({selected_person})",
+    labels={"datetime": "Time", "Frequency": "Facial Expression (%)", "Expression": "Facial Expression"},
+    hover_data=["Theme"],
     template="plotly_white",
     range_y=[0, 1]
 
